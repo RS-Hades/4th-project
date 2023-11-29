@@ -4,6 +4,12 @@ body {
     font-family: 'Familjen Grotesk', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* PAGE CSS SECTION */
+/* header styles */
 header {
     height: 60px;
     width: 100%;
@@ -11,13 +17,13 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    /* background-color: #1F0326; */
-    z-index: 1;
+    z-index: 10;
+    align-items: center;
 }
 #header-img {
     height: 100%;
     width: auto;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 #header-img img {
     height: 100%;
@@ -31,94 +37,66 @@ header {
     color: #D94395;
     justify-self: flex-end;
     margin-left: auto;
-    margin-right: 10px;
-    gap: 10px;
-    font-weight: 800;
+    margin-right: 15px;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 16px
 }
 
 
-
-#our-mission-element {
+/* first section */
+#our-mission-background {
     position: absolute;
     top: 0;
     width: 100%;
     height: 600px;
-    overflow: hidden;
-    
-}
-#mission-element {
-    position: absolute;
-    right: -180px;
-    top: 40px;
-    width: 120%;
-    height: auto;
-    z-index: 1;
-}
-@media only screen and (min-width: 670px){
-    #mission-element {
-        width: 100%
-    }    
-}
-@media only screen and (min-width: 790px){
-    #mission-element {
-        width: 90%
-    }    
-}
-@media only screen and (min-width: 890px){
-    #mission-element {
-        width: 70%;
-        right: -110px
-    }    
-}
-@media only screen and (min-width: 1100px){
-    #mission-element {
-        width: 65%;
-        right: -70px
-    }    
-}
-@media only screen and (min-width: 1230px){
-    #mission-element {
-        width: 60%;
-        right: -5px
-    }    
-}
-#mission-element img {
-    width: 100%;
-    height: 100%;
-}
-#our-mission {
-    height: 500px;
-    width: 100%;
-    position: relative;
-    margin: 0;
 }
 #mission-background {
-    background-image: url(./images/background3.jpg);background-size: cover;
+    background-image: url(./images/background3.jpg);
+    background-size: cover;
     background-position: center;
-    filter: blur(3px);
+    filter: blur(5px);
     width: 100%;
-    height: 120%;
-    position: absolute;
+    height: 100%;
     z-index: -1;
+}
+
+
+#our-mission {
+    height: 540px;
+    width: 100%;
+    margin: 0;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
 #mission-text {
     width: 100%;
     height: 100%;
     color: #510E59;
-    position: absolute;
     display: flex;
     align-items: center;
-    padding-top: 60px;
-    z-index: 2;
 }
 #mission-text-box {
-    background-color: #F2845C;
-    width: 40%;
+    background-color: #fce058;
+    width: 100%;
     height: auto;
     margin-left: 20px;
     border-radius: 15px;
     padding: 10px;
+    z-index: 2;
+}
+#mission-element {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+#mission-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #mission-text h1 {
     margin: 0;
@@ -134,4 +112,346 @@ header {
 }
 #mission-text p {
     margin: 8px 0px 25px;
+}
+
+
+/* This is the second section */
+#portfolio {
+    width: 100%;
+    height: auto;
+    padding: 80px 30px 40px 30px;
+    background-image: linear-gradient(#efeaf1, #ebceff);
+}
+#portfolio h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 800;
+    margin-top: 0;
+    color: #db145d;
+    margin-bottom: 8px;
+}
+#portfolio-description {
+    margin-top: 0;
+    padding-top: 4px;
+    border-top: 1px solid #db145d;
+}
+#portfolio-cards {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill, 
+        minmax(250px, 1fr)
+        );
+    gap: 30px;
+    justify-content: center;
+    padding-top: 25px;
+}
+.card {
+    display: grid;
+    grid-template-rows: 150px 1fr 35px;
+    border-radius: 20px;
+    background-color: #ff91ae;
+    color: #1F0326;
+    padding-bottom: 10px;
+    padding: 15px 10px;
+    padding-top: 10px;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+.card-text h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.card button {
+    width: 50%;
+    justify-self: center;
+    border-radius: 10px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 900;
+}
+.card button:hover {
+    cursor: pointer;
+}
+
+
+/* This is the third section*/
+#work-with-us {
+    padding-top: 60px;
+    width: 100%;
+    height: auto;
+}
+
+/* This is the third section part I */
+#work-description {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+    padding: 0 15px 20px 15px;
+}
+#work-description-img {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 6;
+}
+#work-description-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#work-description-text {
+    width: 100%;
+    height: 100%;
+    grid-column: 4 / span 3;
+    grid-row: 2 / span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: pink;
+    padding: 10px 13px;
+    border-radius: 15px;
+}
+#work-description-text h1 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+#work-description-text button {
+    height: 30px;
+    width: 60%;
+    border-radius: 10px;
+}
+#work-description-text button:hover {
+    cursor: pointer;
+}
+
+/* This is the third section part II */
+#work-features {
+    width: 100%;
+    height: auto;
+    padding: 25px 20px;
+    background-color: darkmagenta;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 20px;
+}
+#work-features-spots {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    grid-column: 1 / span 1;
+}
+#work-features-spots h1 {
+    margin: 0;
+    font-size: 50px;
+}
+#work-features-spots img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+#work-features-line {
+    width: 100%;
+    height: 100%;
+    grid-column: 2 / span 1;
+    background-color: white;
+}
+#work-features-employees {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr repeat(3, 2fr);
+    gap: 5px;
+}
+#work-features-employees h2 {
+    margin: 0;
+    font-size: 30px;
+    grid-row: 1 / span 1;
+}
+#employee-card-1 {
+    grid-row: 2 / span 1;
+}
+#employee-card-2 {
+    grid-row: 3 / span 1;
+}
+#employee-card-3 {
+    grid-row: 4 / span 1;
+}
+.employee-card {
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 2fr;
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 10px;
+}
+.employee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+.employee-card h3 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    font-size: 20px;
+}
+.employee-card p {
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+}
+
+
+
+/* SECTION OF @MEDIA */
+/* @media for smaller sizes */
+@media only screen and (max-width: 575px ) {
+    #header-links {
+        font-size: 14px;
+        gap: 10px;
+        margin-right: 10px;
+    }
+    #header-img {
+        height: 85%;
+        margin-left: 10px;
+    }
+    #mission-text h1 {
+        font-size: 50px
+    }
+}
+@media only screen and (max-width: 480px ) {
+    #header-links {
+        font-size: 13px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 70%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    #mission-text {
+        font-size: 15px
+    }
+    .card-text p {
+        font-size: 15px;
+    }
+    #portfolio h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 410px ) {
+    #header-links {
+        font-size: 13px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 60%;
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 385px ) {
+    #header-links {
+        font-size: 13px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 50%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #mission-text {
+        font-size: 14px
+    }
+}
+@media only screen and (max-width: 365px ) {
+    #header-links {
+        font-size: 10px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 45%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    #portfolio h1 {
+        font-size: 45px;
+    }
+    .card-text p {
+        font-size: 14px;
+    }
+}
+
+
+/* @media for bigger sizes */
+@media only screen and (min-width: 800px ) {
+    #header-links {
+        font-size: 18px
+    }
+    #work-description-text {
+        grid-column: 5 / span 3;
+        padding: 13px 20px;
+    }
+    #work-description-text button {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1024px ) {
+    header {
+        height: 90px;
+    }
+    #header-links {
+        font-size: 20px;
+        margin-right: 20px;
+        gap: 20px
+    }
+    #header-img {
+        margin-left: 20px;
+    }
+    #our-mission-background {
+        height: 630px;
+    }
+    #mission-background {
+        height: 100%
+    }
+    #our-mission {
+        height: 625px;
+        padding-top: 90px;
+    }
+    #work-description-text {
+        padding: 15px 20px;
+        grid-row: 3 / span 2;
+    }
 }
