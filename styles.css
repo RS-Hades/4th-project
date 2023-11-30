@@ -241,7 +241,7 @@ header {
     width: 100%;
     height: auto;
     padding: 25px 20px;
-    background-color: darkmagenta;
+    background-color: rgb(252, 90, 158);
     display: grid;
     grid-template-columns: 1fr 2px 1fr;
     gap: 20px;
@@ -251,7 +251,7 @@ header {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     grid-column: 1 / span 1;
 }
 #work-features-spots h1 {
@@ -263,6 +263,14 @@ header {
     height: 40%;
     object-fit: cover;
     object-position: center;
+    border-radius: 15px;
+}
+#work-features-spots button {
+    height: 4%;
+    width: 50%;
+    border-radius: 10px;
+    justify-self: end;
+    align-self: center;
 }
 #work-features-line {
     width: 100%;
@@ -272,52 +280,85 @@ header {
 }
 #work-features-employees {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: grid;
-    grid-template-rows: 1fr repeat(3, 2fr);
-    gap: 5px;
+    grid-template-rows: 100px 1fr;
 }
 #work-features-employees h2 {
     margin: 0;
     font-size: 30px;
     grid-row: 1 / span 1;
+    text-align: end;
+}
+
+#container-employee-cards {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 2fr 1px 2fr 1px 2fr;
+    justify-items: end;
+}
+.line-card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
 }
 #employee-card-1 {
-    grid-row: 2 / span 1;
+    grid-row: 1 / span 1;
 }
 #employee-card-2 {
     grid-row: 3 / span 1;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
 #employee-card-3 {
-    grid-row: 4 / span 1;
+    grid-row: 5 / span 1;
+    padding-top: 15px;
 }
 .employee-card {
-    width: 100%;
+    width: 95%;
     height: 100%;
-    display: grid; 
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 1fr 2fr;
-    border: 2px solid white;
-    padding: 15px;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 15px;
+    padding: 0 12px;
+}
+.card-first {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
 }
 .employee-card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
+    border-radius: 10px;
 }
+
 .employee-card h3 {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
     font-size: 20px;
+    margin: 0;
+}
+.card-second {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
 }
 .employee-card p {
-    grid-column: 1 / -1;
-    grid-row: 2 / span 1;
+    margin: 0;
 }
+.card-second button {
+    width: 70%;
+    border-radius: 5px;
+    align-self: end;
+}
+
+
 
 
 
