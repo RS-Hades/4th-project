@@ -116,8 +116,12 @@
             
             <div id="work-features-spots">
                 <h1>Our facilities</h1>
-                <img src="./images/spot1.jpg">
-                <img src="./images/spot2.jpg">
+                <img class="spots-img" src="./images/spot1.jpg">
+                <img class="spots-img" src="./images/spot2.jpg">
+                <div id="images-on-mobile">
+                    <img src="./images/spot1.jpg">
+                    <img src="./images/spot2.jpg">
+                </div>
                 <button>Watch more</button>
             </div>
 
@@ -165,11 +169,67 @@
                             <button>Contact</button>
                         </div>
                     </div>
+                
+                
                 </div>    
             </div>
+
+            
         </div>
 
+
         <div id="work-apply-now">
+
+            <div id="apply-now">
+                <h1>Apply now!</h1>
+                <p>If you wanna be part of our team, complete the following survey and send it</p>
+                <form>
+                    <label for="full-name">
+                        Enter your full name: 
+                        <input id="full-name" name="full-name" type="text" required>
+                    </label>
+
+                    <label for="email">
+                        Enter your email: 
+                        <input id="email" name="email" type="email" required>
+                    </label>
+
+                    <label for="position">
+                        Select for which position you're applying:
+                        <select id="position" name="position">
+
+                            <option value=" ">
+                                (Select One)
+                            </option>
+                            <option value="Frontend">
+                                Frontend Developer
+                            </option>
+                            <option value="Backend">
+                                Backend Developer
+                            </option>
+                            <option value="Fullstack">
+                                Fullstack Developer
+                            </option>
+                            <option value="Designer">
+                                UX/UI Designer
+                            </option>
+                            <option value="Data-Scientist">
+                                Data Scientist
+                            </option>
+                            <option value="Data-Analyst">
+                                Data Analyst
+                            </option>
+
+                        </select>
+                    </label>
+
+                    <label for="CV">
+                        Provide us your CV:
+                        <input type="file" id="CV" name="CV">
+                    </label>
+                    
+                </form>
+            </div>
 
         </div>
 
