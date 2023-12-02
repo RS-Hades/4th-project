@@ -364,15 +364,59 @@ header {
 #work-apply-now {
     width: 100%;
     height: auto;
+    padding: 60px 0 40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./images/apply.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #apply-now {
-    width: 70%;
-    height: 80%
+    width: 60%;
+    background-color:rgba(252, 90, 158, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+#apply-now h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+}
+#apply-now p {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 16px;
+}
+#apply-now label {
+    display: block;
+    margin: 10px 0;
+}
+#apply-now input, #apply-now select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 2px;
+}
+#apply-now input, select {
+    background-color: #510E59;
+    color: white;
+}
+#apply-now input[type="submit"] {
+    display: block;
+    width: 45%;
+    height: 30px;
+    font-size: 15px;
+    margin: 25px auto 5px auto;
 }
 
+/* This is the footer */
+footer {
+    min-height: 150px;
+    background-color: #1F0326;
+}
 
 /* SECTION OF @MEDIA */
 /* @media for smaller sizes */
@@ -455,6 +499,12 @@ header {
         height: 15%;
         border-radius: 15px; 
     }
+    #apply-now p {
+        margin: 0 0 20px 0;
+    }
+    #apply-now label {
+        font-size: 14px;
+    }
 }
 @media only screen and (max-width: 480px ) {
     #header-links {
@@ -491,6 +541,20 @@ header {
     #work-features-spots h1 {
         font-size: 40px;
     }
+    #apply-now h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 35px;
+    }
+    #apply-now p {
+        font-size: 15px;
+        margin: 0 0 13px 0;
+    }
+    #apply-now input[type="submit"] {
+        height: 28px;
+        font-size: 14px;
+        margin: 25px auto 5px auto;
+    }
 }
 
 @media only screen and (max-width: 410px ) {
@@ -518,6 +582,15 @@ header {
     }
     .card-second button {
         height: 20%;
+    }
+    #apply-now h1 {
+        font-size: 30px;
+    }
+    #apply-now p {
+        font-size: 14px;
+    }
+    #apply-now input[type="submit"] {
+        margin: 20px auto 5px auto;
     }
 }
 @media only screen and (max-width: 385px ) {
@@ -607,6 +680,33 @@ header {
     #work-features-spots img {
         height: 35%;
     }
+    #apply-now input[type="submit"] {
+        margin: 30px auto 5px auto;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .card-second button {
+        width: 60%;
+        height: 26px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    #work-features-spots button {
+        height: 30px;
+        width: 45%;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    #apply-now {
+        width: 50%;
+    }
+    #apply-now label {
+        margin: 15px 0;
+    }
+    #apply-now input[type="submit"] {
+        margin: 35px auto 5px auto;
+    }
 }
 
 @media only screen and (min-width: 1024px ) {
@@ -641,4 +741,31 @@ header {
     #work-features-employees {
         gap: 20px;
     }
+    .employee-card h3 {
+        font-size: 24px;
+    }
+    .employee-card p {
+        font-size: 18px;
+    }
+    #apply-now {
+        width: 40%;
+    }
+    #apply-now h1 {
+        font-size: 50px;
+    }
+    #apply-now p {
+        font-size: 18px;
+    }
+    #apply-now label {
+        font-size: 18px;
+    }
+    #apply-now input, #apply-now select {
+        height: 25px;
+    }
+    #apply-now input[type="submit"] {
+        height: 35px;
+        font-size: 17px;
+        margin: 40px auto 5px auto;
+    }
 }
+
