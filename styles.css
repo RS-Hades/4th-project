@@ -4,6 +4,12 @@ body {
     font-family: 'Familjen Grotesk', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* PAGE CSS SECTION */
+/* header styles */
 header {
     height: 60px;
     width: 100%;
@@ -11,13 +17,17 @@ header {
     top: 0;
     left: 0;
     display: flex;
-    /* background-color: #1F0326; */
-    z-index: 1;
+    z-index: 10;
+    align-items: center;
+
+    animation: transition-header linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 150px;
 }
 #header-img {
     height: 100%;
     width: auto;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 #header-img img {
     height: 100%;
@@ -28,97 +38,85 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
-    color: #D94395;
     justify-self: flex-end;
     margin-left: auto;
-    margin-right: 10px;
-    gap: 10px;
-    font-weight: 800;
+    margin-right: 15px;
+    gap: 15px;
+    font-weight: bold;
+    font-size: 16px
+}
+#header-links a {
+    text-decoration: none;
+    color: #FF0099;
+    
+    &:visited {
+        color: #FF0099;
+    }
+
+    &:hover {
+        color: #E9C9F2;
+    }
+}
+@keyframes transition-header {
+    to {
+        background-color: #010326;
+        backdrop-filter: blur(5px);
+    }
 }
 
-
-
-#our-mission-element {
+/* first section */
+#our-mission-background {
     position: absolute;
     top: 0;
     width: 100%;
     height: 600px;
-    overflow: hidden;
-    
-}
-#mission-element {
-    position: absolute;
-    right: -180px;
-    top: 40px;
-    width: 120%;
-    height: auto;
-    z-index: 1;
-}
-@media only screen and (min-width: 670px){
-    #mission-element {
-        width: 100%
-    }    
-}
-@media only screen and (min-width: 790px){
-    #mission-element {
-        width: 90%
-    }    
-}
-@media only screen and (min-width: 890px){
-    #mission-element {
-        width: 70%;
-        right: -110px
-    }    
-}
-@media only screen and (min-width: 1100px){
-    #mission-element {
-        width: 65%;
-        right: -70px
-    }    
-}
-@media only screen and (min-width: 1230px){
-    #mission-element {
-        width: 60%;
-        right: -5px
-    }    
-}
-#mission-element img {
-    width: 100%;
-    height: 100%;
-}
-#our-mission {
-    height: 500px;
-    width: 100%;
-    position: relative;
-    margin: 0;
 }
 #mission-background {
-    background-image: url(./images/background3.jpg);background-size: cover;
+    background-image: url(./images/background3.jpg);
+    background-size: cover;
     background-position: center;
-    filter: blur(3px);
+    filter: blur(5px);
     width: 100%;
-    height: 120%;
-    position: absolute;
+    height: 100%;
     z-index: -1;
+}
+
+
+#our-mission {
+    height: 540px;
+    width: 100%;
+    margin: 0;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
 #mission-text {
     width: 100%;
     height: 100%;
     color: #510E59;
-    position: absolute;
     display: flex;
     align-items: center;
-    padding-top: 60px;
-    z-index: 2;
 }
 #mission-text-box {
-    background-color: #F2845C;
-    width: 40%;
+    background-color: #f7e927;
+    width: 100%;
     height: auto;
     margin-left: 20px;
     border-radius: 15px;
     padding: 10px;
+    z-index: 2;
+}
+#mission-element {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+#mission-element img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 #mission-text h1 {
     margin: 0;
@@ -135,3 +133,786 @@ header {
 #mission-text p {
     margin: 8px 0px 25px;
 }
+
+
+/* This is the second section */
+#portfolio {
+    width: 100%;
+    height: auto;
+    padding: 80px 30px 30px 30px;
+    background-color: #f9effc;
+}
+#portfolio h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 800;
+    margin-top: 0;
+    color: #650BBF;
+    margin-bottom: 8px;
+}
+#portfolio-description {
+    margin-top: 0;
+    padding-top: 4px;
+    border-top: 1px solid #570aa5;
+}
+#portfolio-cards {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill, 
+        minmax(250px, 1fr)
+        );
+    gap: 30px;
+    justify-content: center;
+    padding-top: 25px;
+}
+.card {
+    display: grid;
+    grid-template-rows: 150px 1fr 35px;
+    border-radius: 20px;
+    background-color: #590ca7;
+    color: white;
+    padding-bottom: 10px;
+    padding: 15px 10px;
+    padding-top: 10px;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+.card-text h2 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.card button {
+    width: 50%;
+    justify-self: center;
+    border-radius: 10px;
+    font-family: 'Familjen Grotesk', sans-serif;
+    font-weight: 900;
+    background-color: #F2E307;
+    color: #410b47;
+    
+    &:hover {
+        cursor: pointer;
+        background-color: #ffa83d;
+    }
+}
+#reference-work-with-us {
+    height:0px;
+    width: 0px;
+}
+
+
+/* This is the third section*/
+#work-with-us {
+    width: 100%;
+    height: auto;
+}
+
+/* This is the third section part I */
+#work-description {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    padding: 60px 15px 40px 15px;
+    background-color: #4e1773;
+}
+#work-description-img {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 6;
+}
+#work-description-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#work-description-text {
+    width: 100%;
+    height: 100%;
+    grid-column: 4 / span 3;
+    grid-row: 2 / span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #d7bff3;
+    padding: 10px 13px;
+    border-radius: 15px;
+    gap: 15px;
+}
+#work-description-text h1 {
+    font-size: 50px;
+    margin: 0;
+    line-height: 40px;
+}
+#work-description-text p {
+    margin: 0;
+}
+#work-description-text a {
+    text-decoration: none;
+    height: 30px;
+    width: 60%;
+}
+#work-description-text button {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #F2E307;
+    font-weight: 600;
+    color: #510E59;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f89e31;
+    }
+}
+
+
+/* This is the third section part II - main styles*/
+#work-features {
+    width: 100%;
+    height: auto;
+    padding: 25px 20px;
+    background-color: #F2DFE6;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 20px;
+}
+
+/* This is the first subpart of the third section II (facilities) */
+#work-features-spots {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    grid-column: 1 / span 1;
+    margin: 0;
+}
+#work-features-spots h1 {
+    margin: 0;
+    font-size: 50px;
+}
+.spots-img {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+#images-on-mobile {
+    display: none;
+}
+#work-features-spots button {
+    height: 4%;
+    width: 50%;
+    border-radius: 10px;
+    justify-self: end;
+    align-self: center;
+    background-color: #3F1240;
+    color: #E9C9F2;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #F21D6B;
+        color: white;
+    }
+}
+
+/* This is the middle subpart of the the third section II (the divisor line) */
+#work-features-line {
+    width: 100%;
+    height: auto;
+    grid-column: 2 / span 1;
+    background-color: white;
+}
+
+/* This is the final subpart of the third section II (employees) */
+#work-features-employees {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+}
+#work-features-employees h2 {
+    margin: 0;
+    font-size: 30px;
+    text-align: end;
+    line-height: 30px;
+}
+
+#container-employee-cards {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 15px;
+}
+.line-card {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+.employee-card {
+    width: 95%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    gap: 15px;
+    padding: 0 12px;
+}
+.card-first {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+.employee-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.employee-card h3 {
+    font-size: 20px;
+    margin: 0;
+}
+.card-second {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+}
+.employee-card p {
+    margin: 0;
+}
+.card-second button {
+    width: 70%;
+    border-radius: 5px;
+    align-self: end;
+    background-color: #3F1240;
+    color: #E9C9F2;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #F21D6B;
+        color: white;
+    }
+}
+
+/* This is the third section III  */
+#work-apply-now {
+    width: 100%;
+    height: auto;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/apply.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#apply-now {
+    width: 60%;
+    background-color:#e9c9f2c5;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+#apply-now h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+}
+#apply-now p {
+    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 16px;
+}
+#apply-now label {
+    display: block;
+    margin: 10px 0;
+}
+#apply-now input, #apply-now select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 2px;
+}
+#apply-now input, select {
+    background-color: #340B8C;
+    color: white;
+}
+#apply-now input[type="submit"] {
+    display: block;
+    width: 45%;
+    height: 30px;
+    font-size: 15px;
+    margin: 25px auto 5px auto;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #40010D;
+    }
+}
+
+/* This is the footer */
+footer {
+    width: 100%;
+    min-height: auto;
+    padding: 20px 0;
+    background-color: #01011d;
+    display: flex;
+}
+#author-name {
+    width: 50%;
+    height: 100%;
+    padding: 25px 0 25px 25px;
+    color:#ff20a6;
+}
+#author-name h3 {
+    margin: 0;
+}
+#author-links {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    gap: 13px;
+    padding: 25px 35px 25px 0;
+    font-size: 28px;
+}
+#author-links a{
+    color:#FF0099;
+    
+    &:visited {
+        color:#ff0d9e;
+    }
+    &:hover {
+        color: #E9C9F2;
+        cursor: pointer;
+    }
+}
+
+/* SECTION OF @MEDIA */
+/* @media for smaller sizes */
+@media only screen and (max-width: 575px ) {
+    #header-links {
+        font-size: 14px;
+        gap: 10px;
+        margin-right: 10px;
+    }
+    #header-img {
+        height: 85%;
+        margin-left: 10px;
+    }
+    #mission-text h1 {
+        font-size: 50px
+    }
+    .employee-card p {
+        font-size: 14px;
+    }
+    #work-features-spots h1 {
+        font-size: 40px;
+    }
+    #work-features-employees h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    #work-features-spots img {
+        height: 40%;
+    }
+    #author-name {
+        font-size: 15px;
+    }
+    #author-links {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 530px ) {
+    #mission-text h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    #work-features {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #work-features-spots h1 {
+        text-align: center;
+    }
+    .spots-img {
+        display: none;
+    }
+    #images-on-mobile {
+        display: block;
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    #images-on-mobile img {
+        object-fit: cover;
+        object-position: center;
+        width: 50%;
+        height: auto;
+    }
+    #work-features-spots button {
+        height: 20%;
+        border-radius: 10px;
+    }
+    #work-features-line {
+        width: 100%;
+        height: 2px;
+    }
+    #work-features-employees h2 {
+        text-align: center;
+    }
+    .employee-card {
+        width: 100%;
+        padding: 0;
+    }
+    .employee-card p {
+        font-size: 18px;
+    }
+    .card-second button {
+        height: 15%;
+        border-radius: 15px; 
+    }
+    #apply-now p {
+        margin: 0 0 20px 0;
+    }
+    #apply-now label {
+        font-size: 14px;
+    }
+    footer {
+        padding: 15px 0;
+    }
+    #author-name {
+        font-size: 14px;
+    }
+    #author-links {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 480px ) {
+    #header-links {
+        font-size: 13px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 70%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    #mission-text {
+        font-size: 14px
+    }
+    #mission-text {
+        font-size: 15px
+    }
+    .card-text p {
+        font-size: 15px;
+    }
+    #portfolio h1 {
+        font-size: 50px;
+    }
+    .employee-card p {
+        font-size: 16px;
+    }
+    .employee-card img {
+        width: 85%;
+    }
+    #work-features-spots h1 {
+        font-size: 40px;
+    }
+    #apply-now h1 {
+        margin: 0;
+        text-align: center;
+        font-size: 35px;
+    }
+    #apply-now p {
+        font-size: 15px;
+        margin: 0 0 13px 0;
+    }
+    #apply-now input[type="submit"] {
+        height: 28px;
+        font-size: 14px;
+        margin: 25px auto 5px auto;
+    }
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    #author-name {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    #author-links {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+        font-size: 26px;
+        gap: 13px;
+    }
+}
+
+@media only screen and (max-width: 410px ) {
+    #header-links {
+        font-size: 13px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 60%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .employee-card p {
+        font-size: 14px;
+    }
+    .employee-card img {
+        width: 75%;
+    }
+    .employee-card h3 {
+        font-size: 16px;
+    }
+    .card-second button {
+        height: 20%;
+    }
+    #apply-now h1 {
+        font-size: 30px;
+    }
+    #apply-now p {
+        font-size: 14px;
+    }
+    #apply-now input[type="submit"] {
+        margin: 20px auto 5px auto;
+    }
+    footer {
+        padding: 30px 0;
+    }
+    #author-links {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 385px ) {
+    #header-links {
+        font-size: 13px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 50%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    #mission-text {
+        font-size: 13px
+    }
+    #work-description-text {
+        gap: 8px;
+    }
+    #work-description-text h1 {
+        font-size: 40px;
+        line-height: 35px;
+    }
+    #work-description-text p {
+        font-size: 14px;
+    }
+    #work-description-text a {
+        height: 20%;
+        width: 100%;
+    }
+    #work-description-text button {
+        border-radius: 5px;
+    }
+    #work-features-spots h1 {
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 365px ) {
+    #header-links {
+        font-size: 10px;
+        gap: 10px;
+        margin-right: 5px;
+    }
+    #header-img {
+        height: 45%;
+        margin-left: 5px;
+    }
+    #mission-text h1 {
+        font-size: 23px;
+        line-height: 25px;
+    }
+    #mission-text {
+        font-size: 12px
+    }
+    #portfolio h1 {
+        font-size: 45px;
+    }
+    #work-description-text h1 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    #work-description-text p {
+        font-size: 13px;
+    }
+    .card-text p {
+        font-size: 14px;
+    }
+    .card-second button {
+        height: 25%;
+    }
+}
+
+
+/* @media for bigger sizes */
+@media only screen and (min-width: 800px ) {
+    #header-links {
+        font-size: 18px
+    }
+    #work-description-text {
+        grid-column: 5 / span 3;
+        padding: 13px 20px;
+    }
+    #work-description-text button {
+        font-size: 16px;
+    }
+    #apply-now input[type="submit"] {
+        margin: 30px auto 5px auto;
+    }
+    footer {
+        padding: 40px 35px 40px 25px;
+    }
+    #author-name {
+        padding: 0;
+    }
+    #author-links {
+        font-size: 35px;
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .card-second button {
+        width: 60%;
+        height: 26px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    #work-features-spots button {
+        height: 30px;
+        width: 45%;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    #apply-now {
+        width: 50%;
+    }
+    #apply-now label {
+        margin: 15px 0;
+    }
+    #apply-now input[type="submit"] {
+        margin: 35px auto 5px auto;
+    }
+    footer {
+        padding: 50px 35px 50px 25px;
+    }
+    #author-name {
+        font-size: 18px;
+    }
+}
+@media only screen and (min-width: 1024px ) {
+    header {
+        height: 90px;
+    }
+    #header-links {
+        font-size: 20px;
+        margin-right: 20px;
+        gap: 20px
+    }
+    #header-img {
+        margin-left: 20px;
+    }
+    #our-mission-background {
+        height: 630px;
+    }
+    #mission-background {
+        height: 100%
+    }
+    #our-mission {
+        height: 625px;
+        padding-top: 90px;
+    }
+    #work-description-text {
+        padding: 15px 20px;
+        grid-row: 3 / span 2;
+    }
+    #work-features-employees {
+        gap: 20px;
+    }
+    .employee-card h3 {
+        font-size: 24px;
+    }
+    .employee-card p {
+        font-size: 18px;
+    }
+    #apply-now {
+        width: 40%;
+    }
+    #apply-now h1 {
+        font-size: 50px;
+    }
+    #apply-now p {
+        font-size: 18px;
+    }
+    #apply-now label {
+        font-size: 18px;
+    }
+    #apply-now input, #apply-now select {
+        height: 25px;
+    }
+    #apply-now input[type="submit"] {
+        height: 35px;
+        font-size: 17px;
+        margin: 40px auto 5px auto;
+    }
+    footer {
+        padding: 50px 45px 50px 35px;
+    }
+    #author-name {
+        font-size: 20px;
+    }
+}
+

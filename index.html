@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8906f50d47.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -16,27 +17,239 @@
         <img src="./images/logo.png">
     </div>
     <div id="header-links">
-        <span href="">Our mission</span>
-        <span href="">Projects</span>
-        <span href="">Work with us</span>
+        <span><a  href="#our-mission">Our mission</a></span>
+        <span><a href="#portfolio">Projects</a></span>
+        <span><a href="#reference-work-with-us">Work with us</a></span>
     </div>
    </header> 
    <main>
-
-    <section id="our-mission">
+    
+    <section id="our-mission-background">
         <div id="mission-background"></div>
+    </section>
+    
+    <section id="our-mission">
         <div id="mission-text">
             <div id="mission-text-box">
                 <h3>"Make it work, make it right, make it fast." - Kent Beck</h3>
                 <h1>Our Mission</h1>
                 <p>Make the task of develop programs and apps easier for companies with our big repertory of expert developers, giving the best service and prices</p>
-            </div>
+            </div>  
+        </div>
+        <div id="mission-element">
+            <img src="./images/png1.png">
         </div>
     </section>
-    
-    <section id="our-mission-element">
-        <div id="mission-element"><img src="./images/png1.png"></div>
+
+
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <p id="portfolio-description">Here you can find some of our projects that we've made.</p>
+        
+        <div id="portfolio-cards">
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/page1.png">
+                </div>
+                <div class="card-text">
+                    <h2>Integromat</h2>
+                    <p>This is a website which one the users can connect their apps easier.</p>
+                </div>
+                <button type="button">Learn more</button>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/page2.png">
+                </div>
+                <div class="card-text">
+                    <h2>Razorpay</h2>
+                    <p>This is a website that allows users pay in a easier way in their favorite restaurants.</p>
+                </div>
+                <button type="button">Learn more</button>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/page3.png">
+                </div>
+                <div class="card-text">
+                    <h2>Airtable</h2>
+                    <p>In this website the users can work more organized in their jobs.</p>
+                </div>
+                <button type="button">Learn more</button>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./images/page4.png">
+                </div>
+                <div class="card-text">
+                    <h2>Calendly</h2>
+                    <p>Here the users can schedule their meetings and share with others.</p>
+                </div>
+                <button type="button">Learn more</button>
+            </div>
+            <div id="reference-work-with-us"></div>
+        </div>
     </section>
+
+
+
+    <section id="work-with-us">
+
+
+        <div id="work-description">
+            <div id="work-description-img">
+                <img src="./images/work-with-us.jpg">
+            </div>
+            <div id="work-description-text">
+                <h1>Work with us</h1>
+                <p>Do you wanna be part of one of the best teams in the tech industry? We're one of the best options around the world with our level of development, the spots and facilities that we provide to our employees and even more.</p>
+                <a href="#work-apply-now"><button>Apply now!</button></a>
+            </div>
+        </div>
+
+
+
+        <div id="work-features">
+            
+            <div id="work-features-spots">
+                <h1>Our facilities</h1>
+                <img class="spots-img" src="./images/spot1.jpg">
+                <img class="spots-img" src="./images/spot2.jpg">
+                <div id="images-on-mobile">
+                    <img src="./images/spot1.jpg">
+                    <img src="./images/spot2.jpg">
+                </div>
+                <button>Watch more</button>
+            </div>
+
+            <div id="work-features-line"></div>
+            
+            <div id="work-features-employees">
+
+                <h2>What our employees say about us?</h2>
+                
+                <div id="container-employee-cards">
+                    
+                    <div class="employee-card" id="employee-card-1">
+                        <div class="card-first">
+                            <img src="./images/employee1.jpg">
+                            <h3>Arden Bruce</h3>
+                        </div>
+                        <div class="card-second">
+                            <p>"Thrilled to be part of Codikin's amazing team and culture. Constant learning, growth, and a great work-life balance."</p>
+                            <button>Contact</button>
+                        </div>
+                    </div>
+
+                    <div class="line-card"></div>
+
+                    <div class="employee-card" id="employee-card-2">
+                        <div class="card-first">
+                            <img src="./images/employee2.jpg">
+                            <h3>Susan Mason</h3>
+                        </div>
+                        <div class="card-second">
+                            <p>"New at Codikin, impressed by its innovation and growth. Invests in employees, offers development opportunities. Enjoy the balance and lab."</p>
+                            <button>Contact</button>
+                        </div>
+                    </div>
+
+                    <div class="line-card"></div>
+
+                    <div class="employee-card" id="employee-card-3">
+                        <div class="card-first">
+                            <img src="./images/employee3.jpg">
+                            <h3>Josef Mata</h3>
+                        </div>
+                        <div class="card-second">
+                            <p>"I'm a five-year developer at Codikin, and I can't imagine working anywhere else. The company is committed to its employees, the lab is amazing, and I enjoy the social events."</p>
+                            <button>Contact</button>
+                        </div>
+                    </div>
+                
+                
+                </div>    
+            </div>
+
+            
+        </div>
+
+
+        <div id="work-apply-now">
+
+            <div id="apply-now">
+                <h1>Apply now!</h1>
+                <p>If you wanna be part of our team, complete the following survey and send it</p>
+                <form>
+                    <label for="full-name">
+                        Enter your full name: 
+                        <input id="full-name" name="full-name" type="text" required>
+                    </label>
+
+                    <label for="email">
+                        Enter your email: 
+                        <input id="email" name="email" type="email" required>
+                    </label>
+
+                    <label for="position">
+                        Select for which position you're applying:
+                        <select id="position" name="position">
+
+                            <option value=" ">
+                                (Select One)
+                            </option>
+                            <option value="Frontend">
+                                Frontend Developer
+                            </option>
+                            <option value="Backend">
+                                Backend Developer
+                            </option>
+                            <option value="Fullstack">
+                                Fullstack Developer
+                            </option>
+                            <option value="Designer">
+                                UX/UI Designer
+                            </option>
+                            <option value="Data-Scientist">
+                                Data Scientist
+                            </option>
+                            <option value="Data-Analyst">
+                                Data Analyst
+                            </option>
+
+                        </select>
+                    </label>
+
+                    <label for="CV">
+                        Provide us your CV:
+                        <input type="file" id="CV" name="CV">
+                    </label>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div id="author-name">
+            <h3>Page created by <em>Mauricio Lovo</em></h3>
+        </div>
+        <div id="author-links">
+            <a href="https://www.facebook.com/mauricio.lovo.775/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/hades_lov12/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@had_low?_t=8hssKZsxVgr&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></i></a>
+            <a href="https://github.com/RS-Hades" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://discordapp.com/users/634525808589013002" target="_blank"><i class="fa-brands fa-discord"></i></a>
+        </div>
+    </footer>
+    
    </main>
 </body>
 </html>
