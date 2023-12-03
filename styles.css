@@ -38,7 +38,6 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
-    color: #D94395;
     justify-self: flex-end;
     margin-left: auto;
     margin-right: 15px;
@@ -46,9 +45,21 @@ header {
     font-weight: bold;
     font-size: 16px
 }
+#header-links a {
+    text-decoration: none;
+    color: #FF0099;
+    
+    &:visited {
+        color: #FF0099;
+    }
+
+    &:hover {
+        color: #E9C9F2;
+    }
+}
 @keyframes transition-header {
     to {
-        background-color: #1F0326;
+        background-color: #010326;
         backdrop-filter: blur(5px);
     }
 }
@@ -88,7 +99,7 @@ header {
     align-items: center;
 }
 #mission-text-box {
-    background-color: #fce058;
+    background-color: #f7e927;
     width: 100%;
     height: auto;
     margin-left: 20px;
@@ -128,21 +139,21 @@ header {
 #portfolio {
     width: 100%;
     height: auto;
-    padding: 80px 30px 40px 30px;
-    background-image: linear-gradient(#efeaf1, #ebceff);
+    padding: 80px 30px 30px 30px;
+    background-color: #f9effc;
 }
 #portfolio h1 {
     font-size: 60px;
     line-height: 70px;
     font-weight: 800;
     margin-top: 0;
-    color: #db145d;
+    color: #650BBF;
     margin-bottom: 8px;
 }
 #portfolio-description {
     margin-top: 0;
     padding-top: 4px;
-    border-top: 1px solid #db145d;
+    border-top: 1px solid #570aa5;
 }
 #portfolio-cards {
     width: 100%;
@@ -160,8 +171,8 @@ header {
     display: grid;
     grid-template-rows: 150px 1fr 35px;
     border-radius: 20px;
-    background-color: #ff91ae;
-    color: #1F0326;
+    background-color: #590ca7;
+    color: white;
     padding-bottom: 10px;
     padding: 15px 10px;
     padding-top: 10px;
@@ -184,15 +195,22 @@ header {
     border-radius: 10px;
     font-family: 'Familjen Grotesk', sans-serif;
     font-weight: 900;
+    background-color: #F2E307;
+    color: #410b47;
+    
+    &:hover {
+        cursor: pointer;
+        background-color: #ffa83d;
+    }
 }
-.card button:hover {
-    cursor: pointer;
+#reference-work-with-us {
+    height:0px;
+    width: 0px;
 }
 
 
 /* This is the third section*/
 #work-with-us {
-    padding-top: 60px;
     width: 100%;
     height: auto;
 }
@@ -204,8 +222,8 @@ header {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 15px;
-    padding: 0 15px 20px 15px;
+    padding: 60px 15px 40px 15px;
+    background-color: #4e1773;
 }
 #work-description-img {
     grid-column: 1 / span 5;
@@ -226,7 +244,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: pink;
+    background-color: #d7bff3;
     padding: 10px 13px;
     border-radius: 15px;
     gap: 15px;
@@ -239,21 +257,32 @@ header {
 #work-description-text p {
     margin: 0;
 }
-#work-description-text button {
+#work-description-text a {
+    text-decoration: none;
     height: 30px;
     width: 60%;
+}
+#work-description-text button {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    background-color: #F2E307;
+    font-weight: 600;
+    color: #510E59;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f89e31;
+    }
 }
-#work-description-text button:hover {
-    cursor: pointer;
-}
+
 
 /* This is the third section part II - main styles*/
 #work-features {
     width: 100%;
     height: auto;
     padding: 25px 20px;
-    background-color: rgb(252, 90, 158);
+    background-color: #F2DFE6;
     display: grid;
     grid-template-columns: 1fr 2px 1fr;
     gap: 20px;
@@ -262,17 +291,18 @@ header {
 /* This is the first subpart of the third section II (facilities) */
 #work-features-spots {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     grid-column: 1 / span 1;
+    margin: 0;
 }
 #work-features-spots h1 {
     margin: 0;
     font-size: 50px;
 }
-#work-features-spots img {
+.spots-img {
     width: 100%;
     height: 40%;
     object-fit: cover;
@@ -288,12 +318,20 @@ header {
     border-radius: 10px;
     justify-self: end;
     align-self: center;
+    background-color: #3F1240;
+    color: #E9C9F2;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #F21D6B;
+        color: white;
+    }
 }
 
 /* This is the middle subpart of the the third section II (the divisor line) */
 #work-features-line {
     width: 100%;
-    height: 100%;
+    height: auto;
     grid-column: 2 / span 1;
     background-color: white;
 }
@@ -305,6 +343,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin: 0;
 }
 #work-features-employees h2 {
     margin: 0;
@@ -367,13 +406,21 @@ header {
     width: 70%;
     border-radius: 5px;
     align-self: end;
+    background-color: #3F1240;
+    color: #E9C9F2;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #F21D6B;
+        color: white;
+    }
 }
 
 /* This is the third section III  */
 #work-apply-now {
     width: 100%;
     height: auto;
-    padding: 60px 0;
+    padding: 70px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -384,10 +431,10 @@ header {
 }
 #apply-now {
     width: 60%;
-    background-color:rgba(252, 90, 158, 0.8);
+    background-color:#e9c9f2c5;
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    font-weight: 600;
 }
 #apply-now h1 {
     margin: 0;
@@ -410,7 +457,7 @@ header {
     padding: 2px;
 }
 #apply-now input, select {
-    background-color: #510E59;
+    background-color: #340B8C;
     color: white;
 }
 #apply-now input[type="submit"] {
@@ -419,6 +466,11 @@ header {
     height: 30px;
     font-size: 15px;
     margin: 25px auto 5px auto;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #40010D;
+    }
 }
 
 /* This is the footer */
@@ -426,14 +478,14 @@ footer {
     width: 100%;
     min-height: auto;
     padding: 20px 0;
-    background-color: #1F0326;
+    background-color: #01011d;
     display: flex;
 }
 #author-name {
     width: 50%;
     height: 100%;
     padding: 25px 0 25px 25px;
-    color:rgb(252, 90, 158);
+    color:#ff20a6;
 }
 #author-name h3 {
     margin: 0;
@@ -446,10 +498,17 @@ footer {
     gap: 13px;
     padding: 25px 35px 25px 0;
     font-size: 28px;
-    color:rgb(252, 90, 158);
 }
-.fa-facebook, .fa-github {
-    color:rgb(252, 90, 158);
+#author-links a{
+    color:#FF0099;
+    
+    &:visited {
+        color:#ff0d9e;
+    }
+    &:hover {
+        color: #E9C9F2;
+        cursor: pointer;
+    }
 }
 
 /* SECTION OF @MEDIA */
@@ -692,10 +751,12 @@ footer {
     #work-description-text p {
         font-size: 14px;
     }
-    #work-description-text button {
+    #work-description-text a {
         height: 20%;
         width: 100%;
-        border-radius: 10px;
+    }
+    #work-description-text button {
+        border-radius: 5px;
     }
     #work-features-spots h1 {
         font-size: 35px;
@@ -748,9 +809,6 @@ footer {
     }
     #work-description-text button {
         font-size: 16px;
-    }
-    #work-features-spots img {
-        height: 35%;
     }
     #apply-now input[type="submit"] {
         margin: 30px auto 5px auto;
@@ -820,9 +878,6 @@ footer {
     #work-description-text {
         padding: 15px 20px;
         grid-row: 3 / span 2;
-    }
-    #work-features-spots img {
-        height: 30%;
     }
     #work-features-employees {
         gap: 20px;
